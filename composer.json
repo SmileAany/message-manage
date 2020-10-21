@@ -1,0 +1,37 @@
+{
+    "name": "smbear/message-manage",
+    "minimum-stability": "dev",
+    "description": "message manager",
+    "keywords": ["laravel", "message"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "smbear",
+            "email": "ywjmylove@163.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "tucker-eric/eloquentfilter": "^2.4",
+        "overtrue/laravel-wechat":"~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Smbear\\MessageManage\\":"src/"
+        },
+        "files":[
+            "helpers/helper.php"
+        ]
+    },
+    "extra":{
+        "laravel":{
+            "providers":[
+                "Smbear\\MessageManage\\AppServiceProvider"
+            ],
+            "aliases":{
+                "MessageManage":"Smbear\\MessageManage\\Facades\\MessageManage"
+            }
+        }
+    }
+}
